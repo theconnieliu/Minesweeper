@@ -1,7 +1,7 @@
 body {
-    background-color: rgb(200,200,200);
-    color: rgb(0,0,0);
-    font-family: "Open Sans", sans-serif;
+    background-color: rgb(0,0,0);
+    color: rgb(255,255,255);
+    font-family: 'Gugi', cursive;
     text-align: center;
 }
 
@@ -12,10 +12,14 @@ body {
 }
 
 header {
-	
+	font-family: 'Gugi', cursive;
+    font-color: rgb(255,255,255);
+    color: rgb(255,255,255);
 }
 
 footer {
+    font-family: 'Gugi', cursive;
 	font-style: italic;
 	font-size: 90%;
+    color: rgb(255,255,255);
 }
