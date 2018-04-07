@@ -1,5 +1,3 @@
-
-
 import de.bezier.guido.*;
 public final static int NUM_ROWS = 20;
 public final static int NUM_COLS = 20;
@@ -86,7 +84,17 @@ public class MSButton
     public void mousePressed () 
     {
         clicked = true;
-        //your code here
+        if (keyPressed == true) {
+          marked = !marked;
+          if (marked == false) 
+            clicked = false;
+        }
+        else if (bombs.contains(this))
+          displayLosingMessage();
+        else if(countBombs(r,c) > 0)
+          setLabel(new String(countBombs(r,c) + ""));
+        else
+          
     }
 
     public void draw () 
