@@ -110,13 +110,29 @@ public class MSButton
     }
     public boolean isValid(int r, int c)
     {
-        //your code here
+        if(r >= 0 && c >= 0) 
+          return true;
         return false;
     }
     public int countBombs(int row, int col)
     {
         int numBombs = 0;
-        //your code here
+        if(isValid(row,col-1) && buttons[row][col-1].isMarked())
+          numBombs++;
+        if(isValid(row,col+1) && buttons[row][col+1].isMarked())
+          numBombs++;
+        if(isValid(row+1,col) && buttons[row+1][col].isMarked())
+          numBombs++;
+        if(isValid(row-1,col) && buttons[row-1][col].isMarked())
+          numBombs++;
+        if(isValid(row-1,col-1) && buttons[row-1][col-1].isMarked())
+          numBombs++;
+        if(isValid(row-1,col+1) && buttons[row-1][col+1].isMarked())
+          numBombs++;
+        if(isValid(row+1,col-1) && buttons[row+1][col-1].isMarked())
+          numBombs++;
+        if(isValid(row+1,col+1) && buttons[row+1][col+1].isMarked())
+          numBombs++;             
         return numBombs;
     }
 }
