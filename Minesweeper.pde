@@ -93,7 +93,7 @@ public class MSButton
           displayLosingMessage();
         else if(countBombs(r,c) > 0)
           setLabel(new String(countBombs(r,c) + ""));
-        else
+        else 
           
     }
 
